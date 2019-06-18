@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-xs-6 col-md-4">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Enter grocery items." id="txtSearch" [(ngModel)]="task" />
+        <input type="text" class="form-control" placeholder="Enter grocery items." id="txtSearch" [(ngModel)]="task.name" />
         <div class="input-group-btn">
           <button class="btn btn-primary" type="button" (click)="onClick()">
             <span class="glyphicon glyphicon-ok"></span>
@@ -21,7 +21,9 @@
       <!-- Iterate tasks and display each task as a table. -->
       <ul class="list-group">
         <li *ngFor="let task of tasks" class="list-group-item">
-          <span>{{task.name}}</span>
+          <span> {{task.name}} </span>
+          <!-- Create a pencil icon. -->
+          <span (click)="onEdit(task)" class="glyphicon glyphicon-pencil floatright"></span>
         </li>
       </ul>
 
