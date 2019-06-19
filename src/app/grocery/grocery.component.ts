@@ -27,7 +27,7 @@ export class GroceryComponent implements OnInit {
   onClick() {
     if (this.task.id === 0) {
       // Assign a unique time stamp as id to each task.
-      this.tasks.push({id: (new Date()).getTime(), name: this.task.name})
+      this.tasks.push({id: (new Date()).getTime(), name: this.task.name, strike: false})
     }
 
     this.task = {
@@ -49,6 +49,22 @@ export class GroceryComponent implements OnInit {
     for(var i = 0; i < this.tasks.length; i++) {
       if (item.id === this.tasks[i].id) {
         this.tasks.splice(i, 1);
+        break;
+      }
+    }
+  }
+
+  // Create <onStrike> function.
+  onStrike(item) {
+    for(var i = 0; i < this.tasks.length; i++) {
+      if (item.id === this.tasks[i].id) {
+        // Uncheck item from stroke. (When strike === true)
+        if (this.tasks[i].strike) {
+          this.tasks[i].strike = false;
+        // Check item as stroke.  
+        } else {
+          this.tasks[i].strike = true;
+        }
         break;
       }
     }

@@ -21,7 +21,10 @@
       <!-- Iterate tasks and display each task as a table. -->
       <ul class="list-group">
         <li *ngFor="let task of tasks" class="list-group-item">
-          <span> {{task.name}} </span>
+
+          <!-- Use the ngClass directive to apply the class strike to the span element if the <task.strike> value is true. -->
+          <span (click)="onStrike(task)" [ngClass]="{'strike': task.strike}"> {{ task.name }} </span>
+          
           <!-- Create a remove and pencil icons. -->
           <span (click)="onDelete(task)" class="glyphicon glyphicon-remove floatright paddingLeft"></span>   
           <span (click)="onEdit(task)" class="glyphicon glyphicon-pencil floatright"></span>
