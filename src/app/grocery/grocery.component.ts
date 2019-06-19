@@ -58,7 +58,7 @@ export class GroceryComponent implements OnInit {
   onStrike(item) {
     for(var i = 0; i < this.tasks.length; i++) {
       if (item.id === this.tasks[i].id) {
-        // Uncheck item from stroke. (When strike === true)
+        // Uncheck item from stroke. (When stroke === true)
         if (this.tasks[i].strike) {
           this.tasks[i].strike = false;
         // Check item as stroke.  
