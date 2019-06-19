@@ -35,7 +35,6 @@ export class GroceryComponent implements OnInit {
       id: 0
     }
 
-
     // this.tasks.push({name: this.task});
     // this.task = '';
   }
@@ -45,4 +44,13 @@ export class GroceryComponent implements OnInit {
     this.task = item;
   }
 
+  // Create <onDelete> function.
+  onDelete(item) {
+    for(var i = 0; i < this.tasks.length; i++) {
+      if (item.id === this.tasks[i].id) {
+        this.tasks.splice(i, 1);
+        break;
+      }
+    }
+  }
 }
