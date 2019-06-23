@@ -6,8 +6,10 @@ import { AppComponent } from './app.component';
 import { GroceryComponent } from './grocery/grocery.component';
 
 // Import FromsModule & HttpClientModule
-import { FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule, MatToolbarModule, MatIconModule, MatCardModule, MatFormFieldModule, MatInputModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,27 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    FormsModule, 
+    ReactiveFormsModule,  
+    MatFormFieldModule,  
+    MatInputModule, 
+    MatButtonModule, 
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule
+  ],
+  exports: [
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [GroceryComponent] //AppComponent
