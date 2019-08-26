@@ -1,6 +1,6 @@
-# AngularGrocery
+# Grocery List
 
-Update, edit and delete grocery list.
+Update, edit and delete grocery lists.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
 ## Demo video 
@@ -16,8 +16,6 @@ To see a demo video, click the screenshot below.
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### How to install
-
-What things you need to install the software and how to install them
 
 ```
 npm install
